@@ -1,6 +1,10 @@
+# Unique service names avoid collisions with other public Render apps
+# Expected URLs after deploy:
+#   API:  https://katkuri-ems-api.onrender.com
+#   Web:  https://katkuri-ems-web.onrender.com
 services:
   - type: web
-    name: ems-backend
+    name: katkuri-ems-api
     runtime: node
     plan: free
     rootDir: backend
@@ -16,11 +20,12 @@ services:
         sync: false
       - key: JWT_SECRET
         generateValue: true
+      # Set to: https://katkuri-ems-web.onrender.com
       - key: FRONTEND_URL
         sync: false
 
   - type: web
-    name: ems-frontend
+    name: katkuri-ems-web
     runtime: node
     plan: free
     rootDir: frontend
@@ -29,5 +34,6 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      # Set to: https://katkuri-ems-api.onrender.com/api
       - key: NEXT_PUBLIC_API_URL
         sync: false

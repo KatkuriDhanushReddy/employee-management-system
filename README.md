@@ -95,6 +95,25 @@ Open [http://localhost:3000](http://localhost:3000)
 | View Org Tree | ✅ | ✅ | ✅ |
 | CSV Import | ✅ | ✅ | ❌ |
 
+## Deploy on Render
+
+Use Blueprint: https://dashboard.render.com/select-repo?type=blueprint
+
+Service names (unique): `katkuri-ems-api`, `katkuri-ems-web`
+
+| Service | Expected URL |
+|---------|----------------|
+| API | https://katkuri-ems-api.onrender.com |
+| Web | https://katkuri-ems-web.onrender.com |
+
+Set env vars when deploying:
+
+- Backend `MONGODB_URI` — MongoDB Atlas connection string
+- Backend `FRONTEND_URL` — `https://katkuri-ems-web.onrender.com`
+- Frontend `NEXT_PUBLIC_API_URL` — `https://katkuri-ems-api.onrender.com/api`
+
+Then seed: Render Shell on `katkuri-ems-api` → `node src/scripts/seed.js`
+
 ## Docker
 
 ```bash

@@ -5,8 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -H 0.0.0.0",
     "lint": "next lint"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",

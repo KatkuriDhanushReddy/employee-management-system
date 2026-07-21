@@ -1,0 +1,3 @@
+employeeId,name,email,phone,password,department,designation,salary,joiningDate,status,role
+EMP008,Anna Taylor,anna@ems.com,+1-555-0107,Emp@12345,Support,Support Lead,72000,2024-01-10,Active,Employee
+EMP009,Chris Martin,chris@ems.com,+1-555-0108,Emp@12345,Sales,Sales Executive,68000,2024-03-15,Active,Employee
